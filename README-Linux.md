@@ -63,8 +63,8 @@ sudo python3 cdp_advertiser_linux.py --list
 ```
   #   Name             IPv4             MAC                State
   --- ---------------- ---------------- ------------------ ------------
-  1   eth0             10.8.4.65        a0:36:bc:35:82:d2  up
-  2   wlan0            10.8.4.90        3c:71:bf:11:22:33  up
+  1   eth0             172.16.4.65        02:00:00:00:00:01  up
+  2   wlan0            172.16.4.90        02:00:00:00:00:02  up
 ```
 
 > **نکته‌ی رزبری‌پای:** اگر می‌خواهید هم‌زمان با SSH وصل بمانید، از یک
@@ -88,7 +88,7 @@ sudo python3 cdp_advertiser_linux.py --iface eth0
 ```
 CdpNeighbor (AF_PACKET) - CDP neighbor advertiser
   Interface   : eth0 (up=True)
-  Source MAC  : A0:36:BC:35:82:D2
+  Source MAC  : 02:00:00:00:00:01
   Device ID   : rpi-lab
   Platform    : cisco WS-C2960-24TT-L
   ...
@@ -113,7 +113,7 @@ sudo python3 cdp_advertiser_linux.py --iface eth0 \
     --port GigabitEthernet0/5 --capabilities switch,igmp
 
 # تبلیغ یک IP مشخص (پیش‌فرض: IP خود کارت)
-sudo python3 cdp_advertiser_linux.py --iface eth0 --ip 10.8.4.200
+sudo python3 cdp_advertiser_linux.py --iface eth0 --ip 172.16.4.200
 
 # روی ترانک، VLAN بومی را هم اعلام کن
 sudo python3 cdp_advertiser_linux.py --iface eth0 --vlan 10

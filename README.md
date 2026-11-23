@@ -104,7 +104,7 @@ py -3 cdp_advertiser.py --iface "vEthernet (LAN)"
 rem شبیه‌سازی یک سوئیچ سیسکو با نام و IP مشخص
 py -3 cdp_advertiser.py --iface "vEthernet (LAN)" ^
     --hostname LAB-SW2 --platform "cisco WS-C2960-24TT-L" ^
-    --port "GigabitEthernet0/1" --ip 10.8.4.65 --interval 30
+    --port "GigabitEthernet0/1" --ip 172.16.4.65 --interval 30
 
 rem فقط یک فریم بفرست (برای تست سریع)
 py -3 cdp_advertiser.py --iface "vEthernet (LAN)" --count 1
